@@ -1,0 +1,10 @@
+<div *ngIf="hotelDetail == null">
+  <h3>Loading...</h3>
+</div>
+<div *ngIf="hotelDetail != null">
+  <h2>{{hotelDetail.name}}</h2>
+  <img [src]="hotelDetail.logo" width="150">
+  <br>
+  <p>{{hotelDetail.address}}, {{hotelDetail.country}}</p>
+  <button (click)="removeHotel(hotelDetail.id)">Delete</button>
+</div>
