@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HotelServiceService} from '../hotel-service.service'
 
+import { from } from 'rxjs';
 @Component({
   selector: 'app-hotel-component',
   templateUrl: './hotel-component.component.html',

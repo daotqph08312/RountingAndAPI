@@ -1,0 +1,22 @@
+<form>
+  <div>
+    <label>Hotel Name</label>
+    <input type="text" [formControl] = 'name' >
+  </div>
+  <div>
+    <label>Hotel Logo</label>
+    <input type="text" [formControl] = 'logo' >
+  </div>
+    <div>
+    <label>Address</label>
+    <input type="text" [formControl] = 'address' >
+  </div>
+   <div>
+    <label>Country</label>
+    <input type="text" [formControl] = 'country' >
+  </div>
+
+  <div>
+    <button (click) = 'SaveHotel()'>Add Hotel</button>
+  </div>
+</form>

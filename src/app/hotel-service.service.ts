@@ -20,4 +20,7 @@ export class HotelServiceService {
     let url = `${hotelAPI}/${id}`;
     return this.http.delete<any>(url);
   }
+  addNewHotel(object):Observable<any>{
+    return this.http.post<any>(hotelAPI,object);
+  }
 }
