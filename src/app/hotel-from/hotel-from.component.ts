@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormControl } from "@angular/forms";
+import {HotelServiceService} from '../hotel-service.service';
 @Component({
   selector: "app-hotel-from",
   templateUrl: "./hotel-from.component.html",
@@ -11,7 +12,7 @@ export class HotelFromComponent implements OnInit {
   address = new FormControl("");
   country = new FormControl("");
 
-  constructor() {}
+  constructor( private hotelService:HotelServiceService) {}
 
   ngOnInit() {}
   SaveHotel(){
@@ -21,6 +22,9 @@ export class HotelFromComponent implements OnInit {
       address: this.address.value,
       country: this.country.value
     }
-    console.log(newhotel);
+   this.hotelService.addNewHotel(newhotel).subscribe(data =>{
+     console.log(data);
+   });
+   
   }
 }
