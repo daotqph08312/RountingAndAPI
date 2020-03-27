@@ -17,7 +17,8 @@ import { HotelFromComponent } from './hotel-from/hotel-from.component';
     RouterModule.forRoot([
       {path: '', component : HotelComponentComponent},
       {path: 'detail-hotel/:id', component: HotelDetailComponent},
-      {path: 'add-hotel', component: HotelFromComponent}
+      {path: 'add-hotel', component: HotelFromComponent},
+      {path: 'editHotel/:id', component:HotelFromComponent}
       
     ])
   ],
