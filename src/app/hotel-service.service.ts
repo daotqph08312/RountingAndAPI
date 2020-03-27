@@ -22,5 +22,8 @@ export class HotelServiceService {
   }
   addNewHotel(object):Observable<any>{
     return this.http.post<any>(hotelAPI,object);
-  }
+  } updateHotel(object): Observable<any>{
+     let url = `${hotelAPI}/${object.id}`;
+     return this.http.put<any>(hotelAPI,object);
+  };
 }
