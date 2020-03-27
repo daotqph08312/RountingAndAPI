@@ -6,7 +6,7 @@
   <img [src]="hotelDetail.logo" width="150">
   <br>
   <p>{{hotelDetail.address}}, {{hotelDetail.country}}</p>
-  <a style="margin-right:10px;" [routerLink]="editHotel/hotelDetail.id">Update</a>
+  <a style="margin-right:10px;" [routerLink]="['../../editHotel',hotelDetail.id]" >Update</a>
   <button (click)="removeHotel(hotelDetail.id)">Delete</button>
 
 </div>
